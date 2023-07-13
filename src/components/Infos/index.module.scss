@@ -1,0 +1,82 @@
+@use '../../styles/variaveis' as *;
+
+.s_infos {
+    min-height: 100vh;
+    background-color: $corItens;
+    // position: sticky;
+    
+    .tabs {
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        
+        &__button {
+            padding: 0.5rem 0;
+            background-color: transparent;
+            border: none;
+            border-bottom: 5px solid transparent;
+            @include itens($corDescricao);
+            text-transform: uppercase;
+        }
+        &__buttonIsActive {
+            transition: all .5s ease 0s;
+            border-bottom: 5px solid $corDescricao;    
+        }
+    }
+
+    .list {
+        
+        &__psicoterapia {
+            padding-top: 3rem;
+
+            &__img {
+                text-align: center;
+                @include mq('lg') {
+                    display: block;
+                }
+                &__foto {
+                    @media screen and (max-width: 576px) {
+                            height: 200px;
+                    }
+                }
+
+                &__forense {
+                    @include mq('lg') {
+                        // display: none;
+                    }
+                    &__img {
+                        @media screen and (max-width: 576px) {
+                            height: 400px
+                        }
+                        height: 38rem;
+                        object-fit: cover
+                        
+                    }
+                }
+            }
+
+            &__title {
+                @include tituloSecao($corDescricao);
+                text-align: end;
+                &__forense {
+                    text-align: start
+                }
+
+                @media screen and (max-width: 315px) {
+                    font-size: 2rem
+                }
+            }
+            &__desc {
+                @include descricao;
+                text-align: end;
+
+                &__forense {
+                    text-align: start
+                }
+            }
+        }
+    
+    }
+}

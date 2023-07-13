@@ -1,0 +1,52 @@
+@use '../../styles/variaveis' as *;
+
+.s_servicos {
+    background-color: $corDescricao;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+
+    .title {
+        @include tituloSecao();
+        text-align: center;
+        padding-top: 2.5rem;
+    }
+    .tabs {
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        
+        &__button {
+            padding: 0.5rem 0;
+            background-color: transparent;
+            border: none;
+            border-bottom: 5px solid transparent;
+            @include itens($corPreto);
+            text-transform: uppercase;
+        }
+        &__buttonIsActive {
+            transition: all .5s ease 0s;
+            border-bottom: 5px solid $corPreto;    
+        }
+    }
+
+    .itemDiv {
+        padding: 1rem 0;
+        @include itens;
+        text-align: center;
+
+        &__icon {
+            @include mq('sm'){
+                display: none;
+            }
+        }
+    }
+
+    .tratamentosInd {
+        @media screen and (max-width: 305px) {
+            font-size: 2rem;
+        }
+    }
+}

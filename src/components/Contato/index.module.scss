@@ -1,0 +1,68 @@
+@use '../../styles/variaveis' as *;
+
+.s_contato {
+    background-color: $corTitulo;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.e_button {
+    border-radius: 2rem;
+    background-color: $whatsapp;
+    padding: 1rem 3rem;
+    margin: 0 auto;
+    border: none;
+    @include mq('sm') {
+        display: block;
+    }
+
+    .e_Btext { // Texto dos botões
+        @include descricao($corBranco, 500);
+        text-align: center;
+        background-color: transparent;
+        
+        &__m_contato { // Modificador do texto do botão (CONTATO)
+            color: $corPreto;
+        }
+    }
+
+    &:hover {
+        transition: all .25s;
+        color: $corPreto;
+        background-color: rgba($color: $whatsapp, $alpha: 0.75);
+    }
+
+}
+
+.titulo {
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    @include tituloSecao($corDescricao)
+}
+
+.desc {
+    @include descricao($corDescricao, 400, 1.5rem);
+    padding-bottom: 4rem;
+}
+
+.item {
+    @include descricao($corDescricao, 500, 1rem);
+
+    @include mq('sm') {
+       font-size: 14px;
+    }
+}
+
+.row {
+    @include mq('sm') {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.icon {
+    @media screen and (max-width: 400px) {
+        height: 50%;
+    }
+}

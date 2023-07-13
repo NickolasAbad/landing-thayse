@@ -1,0 +1,37 @@
+@use '../../styles/variaveis' as *;
+
+.s_postagens {
+    background-color: $corDescricao;
+    min-height: 100vh;
+    padding-top: 3rem;
+}
+
+.titulo {
+    @include tituloSecao;
+    margin-bottom: 1rem;
+}
+
+.cardItem {
+    margin: 2rem 0;
+
+    @include mq('sm') {
+        margin: 0;
+    }
+}
+
+.posts {
+    padding: 2rem;
+}
+
+.postsItem {
+    @include mq('md') {
+        margin-bottom: 1rem;
+    }
+}
+
+.cardImage {
+    object-fit: cover;
+    border-radius: 55;
+    width: 50vw;
+    height: 30vh
+}

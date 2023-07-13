@@ -1,0 +1,49 @@
+$corTitulo: #462217;
+$corSecao: #D7BFA8;
+$corDescricao: #F0EBE6;
+$corItens: #793D24;
+$corBranco: #FFF;
+$corPreto: #111;
+$contato: #E8B399;
+$whatsapp: #25D366;
+
+@mixin tituloSecao($cor: $corTitulo, $size: 2.5rem, $weight: 600) {
+    color: $cor;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: 120%;
+}
+
+@mixin descricao($cor: $corDescricao, $weight: 400, $size : 1rem) {
+    color: $cor;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: 140%;
+}
+
+@mixin itens($cor: $corItens) {
+    color: $cor;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+@mixin mq($breakpoint) {
+    @if $breakpoint == 'sm' {
+        @media (max-width: 576px) { @content; }
+    } @else if $breakpoint == 'md' {
+        @media (max-width: 768px) { @content; }
+    }
+    @else if $breakpoint == 'lg' {
+        @media (max-width: 992px) { @content; }
+    }
+    @else if $breakpoint == 'xl' {
+        @media (max-width: 1200px) { @content; }
+    } 
+    @else if $breakpoint == 'xxl' {
+        @media (max-width: 1400px) { @content; }
+    }
+    @else if $breakpoint != 'xl' and 'lg' and 'md' and 'sm' and 'xxl' {
+        @media (max-width: $breakpoint) { @content; }
+    }
+}

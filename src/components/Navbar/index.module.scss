@@ -1,0 +1,39 @@
+@use '../../styles/variaveis' as *;
+
+.s_navbar {
+    background-color: $corDescricao;
+    z-index: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+    @include mq('md') {
+        display: block;
+        text-align: center;
+    }
+}
+
+.imgDiv {
+
+    &__img {
+        height: 3.75rem;
+        padding: 0.25rem;
+
+        @media screen and (max-width: 300px) {
+            height: 2.5rem;
+        }
+    }
+}
+
+.items {
+    @include descricao($corPreto, 500);
+    margin-left: 1rem;
+
+    @include mq('md') {
+        display: none;
+    }
+}

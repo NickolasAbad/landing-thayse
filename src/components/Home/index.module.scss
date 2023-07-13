@@ -1,0 +1,162 @@
+@use '../../styles/_variaveis.scss' as *;
+
+.s_hero {
+    position: relative;
+    overflow: hidden;
+    background-color: $corDescricao;
+    @media screen and (min-width: 769px) {
+        height: 90vh;
+    }
+
+    *{
+        flex-basis: 100%;
+    }
+
+    .ul {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        gap: 6.5rem;
+        margin: 0;
+        padding: 0;
+
+        @include mq('lg') {
+            gap: 3rem;
+        }
+
+        @include mq('md') {
+            display: block;
+        }
+    }
+
+    h1 {
+        @include tituloSecao($corTitulo, 3rem, 700);
+        white-space: nowrap;
+
+        @include mq('sm') {
+            white-space: inherit
+        }
+    }
+
+    .desc {
+        @include tituloSecao($corItens, 1.5rem, 500);
+    }
+
+    .quoteDiv {
+        @include tituloSecao($corItens, 1rem, 700);
+        display: block;
+        width: 100vw;
+        @include mq('lg') {
+            p {
+                display: none;
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
+    .hero_buttonS {
+        @include descricao($corBranco, 500);
+        border: none;
+        background-color: $corItens;
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        text-align: center;
+        white-space: nowrap;
+
+        @media screen and (max-width: 376px) {
+            margin-bottom: 1rem !important;
+        }
+    }
+
+    .hero_buttonC {
+        @include descricao($corPreto, 500);
+        background-color: transparent;
+        border: 2px solid $corTitulo;
+        margin-left: 1.5rem;
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+        text-align: center;
+
+        @include mq(376px) {
+            margin-left: 0;
+        }
+    }
+
+    .button {
+        @include mq(376px) {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        @include mq('md') {
+            margin-bottom: 0;
+        }
+        margin-bottom: 12rem;
+    }
+
+    .img {
+        @include mq('xl') {
+           height: 80vh;
+        }
+    }
+
+    .quote {
+        position: absolute;
+        max-width: 40%;
+        bottom: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .items {
+        padding: 9.6vh 0;
+        @include mq('md') {
+            padding-top: 9.6vh;
+        }
+    }
+
+    .hero_texts {
+        padding-bottom: 2.5rem;
+    }
+
+    .hero_imgContent {
+        // display: inline-block;
+        // position: relative;
+        @include mq('xl') {
+
+            position: absolute;
+            bottom: 0;
+            max-height: 80vh;
+            z-index: 1;
+        }
+
+        @include mq('md') {
+            position: absolute;
+            display: block;
+        }
+        justify-content: center;
+        
+
+        img {
+            position: relative;
+            // z-index: 2;
+            @include mq('lg') {
+                height: 80vh;
+                object-fit: cover;
+            }
+
+            @include mq('md') {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+    // @media screen and (max-width: 950px) {
+    //     padding: 0;
+    //     flex-direction: column;
+    // }
+}

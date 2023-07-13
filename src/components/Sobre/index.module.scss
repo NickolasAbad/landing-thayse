@@ -1,0 +1,31 @@
+@use '../../styles/variaveis' as *;
+
+.s_sobre {
+    background-color: #793D24;
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 20px;
+}
+
+.titulo {
+    @include tituloSecao($corDescricao)
+}
+
+.image {
+    height: 35rem;
+    border-radius: 4rem;
+    margin-left: 4rem;
+
+    @include mq('lg') {
+        display: none;
+    }
+
+    @include mq('xl') {
+        margin-left: 3.5rem;
+        height: 30rem;
+    }
+}
+
+.desc {
+    @include descricao($corDescricao)
+}
