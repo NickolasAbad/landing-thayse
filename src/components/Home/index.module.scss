@@ -104,7 +104,7 @@
 
     .quote {
         position: absolute;
-        max-width: 40%;
+        max-width: 30%;
         bottom: 0;
         display: block;
         text-align: center;
@@ -124,13 +124,10 @@
     .hero_imgContent {
         // display: inline-block;
         // position: relative;
-        @include mq('xl') {
-
             position: absolute;
             bottom: 0;
-            max-height: 80vh;
+            max-height: 90vh;
             z-index: 1;
-        }
 
         @include mq('md') {
             position: absolute;
