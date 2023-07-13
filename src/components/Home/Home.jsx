@@ -20,8 +20,8 @@ function Home() {
                             </div>
                             <div className={clsx(styles.hero_buttonsQuote)}>
                                 <div className={styles.button}>
-                                    <a href="#" className={clsx(styles.hero_buttonS, styles.button)}>Saiba mais</a>
-                                    <a href="#" className={clsx(styles.hero_buttonC, styles.button)}>Contato</a>
+                                    <a href="#infos" className={clsx(styles.hero_buttonS, styles.button)}>Saiba mais</a>
+                                    <a href="#contato" className={clsx(styles.hero_buttonC, styles.button)}>Contato</a>
                                 </div>
                             </div>
                         </li>
